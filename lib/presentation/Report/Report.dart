@@ -31,6 +31,7 @@ class _ReportState extends State<Report> {
       await provider.getMonthlyTransactions(monthsList[0]);
       await provider.getAmount(monthsList[0]);
       groupList = provider.groupData.entries.toList();
+      print(groupList);
       provider.setLoading();
       setState(() {});
     } else {
@@ -46,6 +47,7 @@ class _ReportState extends State<Report> {
     Colors.teal,
     Colors.grey,
   ];
+
   final List<String> items = [
     "Food",
     "Transport",
