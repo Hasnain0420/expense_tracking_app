@@ -91,7 +91,7 @@ class AddTransactionHelper extends ChangeNotifier{
 
     //CHECK FOR CURRENT MONTH VALIDATION
     DateTime now = DateTime.now();
-    String month = DateFormat('MM-yyyy').format(now);
+    String month = DateFormat('MM-yy').format(now);
     if(Prefrence.getCurrentMonth() != month){
       List<String> reportList = Prefrence.getReportMonths();
       reportList.add(Prefrence.getCurrentMonth());

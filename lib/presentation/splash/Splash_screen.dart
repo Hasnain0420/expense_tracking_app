@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     if (isNew) {
       DateTime now = DateTime.now();
-      await Prefrence.setCurrentMonth(DateFormat('MM-yyyy').format(now));
+      await Prefrence.setCurrentMonth(DateFormat('MM-yy').format(now));
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -52,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
       );
     } else {
       DateTime now = DateTime.now();
-      String month = DateFormat('MM-yyyy').format(now);
+      String month = DateFormat('MM-yy').format(now);
 
       print("========== BEFORE ==========");
       print("Phone Month      : $month");
